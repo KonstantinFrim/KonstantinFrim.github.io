@@ -1,1 +1,0 @@
-# KonstantinFrim.github.io
