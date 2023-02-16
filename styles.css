@@ -1,0 +1,1461 @@
+* {
+	padding: 0;
+	margin: 0;
+	font-family: 'Montserrat', sans-serif;
+	scroll-behavior: smooth;
+}
+
+/*a:link {
+	color: #948d99
+}
+
+a:visited {
+	color: #948d99;
+}
+
+a:hover {
+	cursor: pointer;
+}*/
+
+.header {
+	height: 100vh;
+	width: 100%;
+	/*background-image: linear-gradient(rgba(32, 32, 32, 0.5), rgba(32, 32, 32, 0.5)), url(images/banner.jpg);*/
+	background-image: linear-gradient(#201E2980, #201E29), url(images/banner.jpg);
+	background-position: center;
+	background-size: cover;
+	position: relative;
+}
+
+
+header {
+	width: auto;
+	height: 80px;
+	/* background: #11101b; */
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding: 0 100px;
+}
+
+.logo {
+	font-size: 28px;
+	font-weight: bold;
+	color: #fefefe;
+}
+
+.hamburger {
+	display: none;
+}
+
+.nav-bar ul {
+	display: flex;
+	list-style: none;
+}
+
+.nav-bar ul li a {
+	display: block;
+	color: #fefefe;
+	font-size: 20px;
+	padding: 10px 25px;
+	border-radius: 50px;
+	transition: 0.2s;
+	margin: 0 5px;
+	text-decoration: none;
+}
+
+.nav-bar ul li a:hover {
+	color: #11101b;
+	background: #fefefe;
+}
+
+.nav-bar ul li a.active {
+	color: #11101b;
+	background: #fefefe;
+}
+
+@media only screen and (max-width: 1320px) {
+	header {
+		padding: 0 50px;
+	}
+}
+
+@media only screen and (max-width: 1100px) {
+	header {
+		padding: 0 30px;
+	}
+}
+
+@media only screen and (max-width: 900px) {
+	.hamburger {
+		display: block;
+		cursor: pointer;
+	}
+	.hamburger .line {
+		width: 30px;
+		height: 3px;
+		background: #fefefe;
+		margin: 6px 0;
+	}
+	.nav-bar {
+		height: 0px;
+		position: absolute;
+		top: 80px;
+		left: 0;
+		right: 0;
+		width: 100vw;
+		background: #11101b;
+		transition: 0.5s;
+		overflow: hidden;
+		z-index: 1;
+        border-bottom-left-radius: 10px;
+        border-bottom-right-radius: 10px;
+	}
+	.nav-bar.active {
+		height: 450px;
+	}
+	.nav-bar ul {
+		display: block;
+		width: fit-content;
+		margin: 80px auto 0 auto;
+		text-align: center;
+		transition: 0.5s;
+		opacity: 0;
+	}
+	.nav-bar.active ul {
+		opacity: 1;
+	}
+	.nav-bar ul li a {
+		margin-bottom: 12px;
+	}
+}
+
+@media only screen and (min-width: 2000px) {
+	header {
+		padding-top: 30px;
+	}
+	.logo {
+		font-size: 34px;
+	}
+	.nav-bar ul li a {
+		font-size: 26px;
+	}
+}
+
+@media only screen and (min-width: 3000px) {
+	header {
+		padding-top: 60px;
+	}
+	.logo {
+		font-size: 60px;
+	}
+	.nav-bar ul li a {
+		font-size: 40px;
+	}
+}
+
+
+
+.title {
+	width: 100%;
+	color: #fff;
+	position: absolute;
+	text-align: center;
+	top: 60%;
+}
+
+.title h1 {
+	font-size: 40px;
+}
+
+.title p {
+	font-size: 24px;
+    padding: 20px 15px;
+}
+
+@media only screen and (min-width: 900px) {
+    .title {
+		width: 90%;
+        text-align: left;
+        top: 70%;
+        padding-left: 20px;
+    }
+    .title h1 {
+        font-size: 60px;
+    }
+    .title p {
+        padding-right: 50px;
+        padding-left: 0;
+        font-size: 30px;
+    }
+}
+
+@media only screen and (min-width: 1200px) {
+    .header {
+        background-attachment: fixed;
+    }
+    .title {
+        padding-left: 50px;
+    }
+    .title h1 {
+        font-size: 70px;
+    }
+    .title p {
+        font-size: 30px;
+    }
+}
+
+@media only screen and (min-width: 2600px) {
+	.title h1 {
+		font-size: 120px;
+	}
+	.title p {
+		font-size: 60px;
+	}
+}
+
+
+
+.overview_title {
+	background-image: url(images/background_blank.jpg);
+	background-position: center;
+	background-size: cover;
+	position: relative;
+	/* background-color: #201E29; */
+	height: 180px;
+	width: 100%;
+	text-align: center;
+	padding-top: 130px;
+	color: #f84f39;
+}
+
+.overview_title h2 {
+   font-size: 35px;
+	padding-left: 20px;
+	padding-right: 20px;
+}
+
+#zfsub {
+	color: #FFC857;
+	margin-top: 10px;
+}
+
+.overviewMobile {
+	background-image: url(images/background_center.jpg);
+	background-position: center;
+	background-size: cover;
+	position: relative;
+}
+.v_p_container {
+	display: flex;
+	justify-content: center;
+}
+
+.Stromverbrauch_mobile {
+	width: 42vw;
+	height: 36vh;
+	background-image: linear-gradient(to top, #ffd89bB3 0%, #19547bB3  100%), url(images/powerLine.jpeg);
+	background-size: cover;
+	background-position: center;
+	position: relative;
+	margin: auto;
+	border-radius: 10px;
+	font-size: 18px;
+	line-height: 1.4;
+}
+
+.Stromverbrauch_mobile p {
+	text-align: center;
+	color: black;
+	padding: 5px;
+}
+
+#TWh7714 {
+	color: white;
+	font-size: 25px;
+	padding-top: 40px;
+	padding-bottom: 25px;
+}
+
+#linkVmobile {
+	font-size: 15px;
+}
+#linkVmobile a:link {
+	color: white;
+}
+#linkVmobile a:hover {
+	color: white;
+}
+#linkVmobile a:visited {
+	color: white;
+}
+
+.Stromproduktion_mobile {
+	width: 42vw;
+	height: 36vh;
+	background-image: linear-gradient(to bottom, #19547bB3 0%, #89253eB3 100%), url(images/powerPlant.jpeg);
+	background-size: cover;
+	background-position: center;
+	position: relative;
+	margin: auto;
+	border-radius: 10px;
+	font-size: 18px;
+	line-height: 1.4;
+}
+
+.Stromproduktion_mobile p {
+	text-align: center;
+	color: #ccc9ce;
+	padding: 5px;
+}
+
+#TWh8573 {
+	color: white;
+	font-size: 25px;
+	padding-top: 40px;
+	padding-bottom: 25px;
+}
+#linkPmobile {
+	font-size: 15px;
+}
+#linkPmobile a:link {
+	color: white;
+}
+#linkPmobile a:hover {
+	color: white;
+}
+#linkPmobile a:visited {
+	color: white;
+}
+
+
+.Strommix_mobile {
+	width: 92vw;
+	height: 34vh;
+	background-image: linear-gradient(-225deg, #0B486BCC 0%, #F56217CC 100%), url(images/transformerStation_4.jpeg);
+	background-size: cover;
+	background-position: center;
+	position: relative;  
+	margin: auto;
+	border-radius: 10px;
+	margin-top: 20px;
+	font-size: 18px;
+}
+
+.Strommix_mobile p {
+	color: #ccc9ce;
+}
+
+#Strommix {
+	color: white;
+	font-size: 25px;
+	padding-top: 10px;
+	text-align: center;
+}
+#linkMmobile {
+	font-size: 15px;
+	color: white;
+}
+#linkMmobile a:link {
+	color: white;
+}
+#linkMmobile a:hover {
+	color: white;
+}
+#linkMmobile a:visited {
+	color: white;
+}
+
+
+.Mixbox {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	padding-top: 5px;
+}
+
+.Mixbox p {
+	padding: 7px 5px;
+	width: 130px;
+	text-align: center;
+}
+
+@media only screen and (min-width: 500px) { /*Handy quer*/
+	#TWh7714 {
+		padding-top: 15px;
+		padding-bottom: 0;
+	}
+	.Stromverbrauch_mobile {
+		height: 40vh;
+		background-image: linear-gradient(to top, #ffd89bB3 0%, #19547bB3  100%), url(images/powerLineLandscape.jpeg);
+	}
+	.Stromverbrauch_mobile p {
+		padding: 0;
+	}
+	
+	#TWh8573 {
+		padding-top: 15px;
+		padding-bottom: 0;
+	}
+	.Stromproduktion_mobile {
+		height: 40vh;
+		background-image: linear-gradient(to bottom, #19547bB3 0%, #89253eB3 100%), url(images/powerPlantLandscape.jpeg);
+	}
+	.Stromproduktion_mobile p {
+		padding: 0;
+	}
+	
+	.Strommix_mobile {
+		height: 33vh;
+	}
+}
+
+@media only screen and (min-height: 950px) { /*Tablets in Portrait*/
+	#TWh7714 {
+		font-size: 40px;
+		padding-top: 75px;
+		padding-bottom: 20px;
+	}
+	.Stromverbrauch_mobile {
+		 
+	}
+	.Stromverbrauch_mobile p {
+		font-size: 25px;
+	}
+	
+	#TWh8573 {
+		font-size: 40px;
+		padding-top: 75px;
+		padding-bottom: 20px;
+	}	
+	.Stromproduktion_mobile p {
+		font-size: 25px;
+	}
+	
+	#Strommix {
+		font-size: 40px;
+		padding-top: 30px;
+	}
+	.Mixbox p {
+		font-size: 25px;
+		padding: 15px 50px;
+		width: 170px;
+	}
+}
+
+@media only screen and (max-width: 899px) {
+	.overviewVerbrauch {
+		display: none;
+	}
+	.overviewProduktion {
+		display: none;
+	}
+	.overviewStrommix {
+		display: none;
+	}
+}
+
+@media only screen and (min-width: 900px) {
+	.overviewMobile {
+		display: none;
+	}
+}
+
+
+
+
+@media only screen and (min-width: 900px) {
+	.overview_title {
+		background-image: none;
+		background-color: #201E29;
+	}
+	.overview_title h2 {
+		font-size: 43px;
+	}
+	#zfsub {
+		padding-left: 400px;
+		padding-top: 15px;
+	}
+}
+
+@media only screen and (min-width: 1200px) {
+	.overview_title {
+		height: 300px;
+		padding-top: 150px;
+	}
+	.overview_title h2 {
+		font-size: 55px;
+	}
+	#zfsub {
+		padding-left: 400px;
+		padding-top: 15px;
+	}
+}
+
+@media only screen and (min-width: 2000px) {
+	.overview_title h2 {
+		font-size: 80px;
+	}
+}
+
+/*STROMVERBRAUCH DESKTOP */
+
+.overviewVerbrauch {
+	/*background-image: url(images/background_center.jpg);
+	background-position: center;
+	background-size: cover;
+	position: relative;*/
+	background-color: #201E29;
+}
+.containerVerbrauch {
+	display: flex;
+	padding-top: 100px;
+}
+
+.verbrauchBackground {
+	/*background-image: linear-gradient(135deg, #19547b 0%, #ffd89b 100%);*/
+	/*background-color: #201E29;*/
+	width: 95vw;
+	margin: auto;
+	border-radius: 10px;
+	padding-bottom: 100px;
+	/*box-shadow: 8px 8px 6px #4d4d4dB3;*/
+}
+
+.chartBoxVerbrauch {
+	/*background-color: #FAFAFC;*/
+	background-color: #282533;
+	height: 50vh;
+	width: 60%;
+	margin: auto;
+	padding: 30px;
+	border-radius: 10px;
+	/*box-shadow: 4px 4px 6px #4d4d4d;*/
+}
+
+.linkVerbrauch {
+	display: inline-block;
+	font-size: 20px;
+	padding-top: 15px;
+	color: #948d99;
+}
+.linkVerbrauch > a {
+	display: inline-block;
+	font-size: 20px;
+	padding-top: 15px;
+	color: #948d99;
+}
+
+/* #linkProduktionDesktop {
+	display: none;
+	font-size: 20px;
+	padding-top: 15px;
+	color: #948d99;
+} */
+
+@media only screen and (min-width: 2000px) {
+	.linkVerbrauch {
+		font-size: 40px;
+	}
+	.linkVerbrauch > a {
+		font-size: 40px;
+	}
+}
+
+.btn_verbrauch {
+	width: 25%;
+	text-align: center;
+	margin: auto;
+	background-color: #282533;
+	/* height: 50vh; */
+	padding: 30px 0;
+	border-radius: 10px;
+	display: flex;
+	flex-direction: column;
+}
+
+.btn_verbrauch button {
+	border: none;
+	background: none;
+	cursor: pointer;
+	font-size: 40px;
+	margin: auto;
+	padding: 20px 0;
+}
+
+@media only screen and (min-width: 2000px) {
+	.btn_verbrauch button {
+		font-size: 70px;
+	}
+}
+
+#China_btnV {
+	color: #f84f39;
+}
+
+#China_btnV.clicked {
+	color: #948d99;
+}
+
+#USA_btnV {
+	color: #948d99;
+}
+
+#USA_btnV.clicked {
+	color: #AADF40;
+}
+
+#DE_btnV {
+	color: #948d99;
+}
+
+#DE_btnV.clicked {
+	color: #4BE6F0;
+}
+
+/*STROMPRODUKTION DESKTOP*/
+
+.overviewProduktion {
+	background-image: url(images/background_blank.jpg);
+	background-position: center;
+	background-size: cover;
+	position: relative;
+}
+
+.produktionBackground {
+	background-image: linear-gradient(135deg, #19547bB3 0%, #89253eB3 100%);
+	width: 95vw;
+	margin: auto;
+	border-radius: 10px;
+	padding-bottom: 100px;
+	box-shadow: 8px 8px 6px #4d4d4dB3;
+}
+
+.containerProduktion {
+	display: flex;
+	padding-top: 100px;
+}
+
+.chartBoxProduktion {
+	background-color: #FAFAFC;
+	height: 50vh;
+	width: 60%;
+	margin: auto;
+	padding: 5px;
+	border-radius: 10px;
+	box-shadow: 4px 4px 6px #4d4d4d;
+}
+
+.linkProduktion {
+	display: inline-block;
+	font-size: 20px;
+	padding-top: 15px;
+	color: #948d99;
+}
+
+.btn_produktion {
+	width: 25%;
+	text-align: center;
+	margin: auto;
+	background-color: #282533;
+	/* height: 50vh; */
+	padding: 30px 0;
+	border-radius: 10px;
+	display: none;
+	flex-direction: column;
+}
+
+.btn_produktion button {
+	display: block;
+	border: none;
+	background: none;
+	font-size: 40px;
+	padding: 20px 0;
+	margin: auto;
+	cursor: pointer;
+}
+
+@media only screen and (min-width: 2000px) {
+	.btn_produktion button {
+		font-size: 70px;
+	}
+}
+
+#China_btnP {
+	color: #f84f39;
+}
+
+#China_btnP.clicked {
+	color: #948d99;
+}
+
+#USA_btnP {
+	color: #948d99;
+}
+
+#USA_btnP.clicked {
+	color: #AADF40;
+}
+
+#DE_btnP {
+	color: #948d99;
+}
+
+#DE_btnP.clicked {
+	color: #4BE6F0;
+}
+
+/*STROMMIX DESKTOP*/
+
+.overviewStrommix {
+	/*background-image: url(images/background_right.jpg);
+	background-position: center;
+	background-size: cover;*/
+	background-color: #201E29;
+	position: relative;
+	/*height: 150vh;*/
+}
+
+.strommixBackground {
+	/*background-image: linear-gradient(135deg, #0B486B 0%, #F56217 100%);*/
+	/*background-color: #201E29;*/
+	width: 95vw;
+	margin: auto;
+	border-radius: 10px;
+	padding-bottom: 100px;
+	padding-top: 100px;
+	/*box-shadow: 8px 8px 6px #4d4d4dB3;*/
+}
+
+#titleStrommix {
+	font-size: 30px;
+	padding-bottom: 20px;
+	color: #948d99;
+}
+
+.containerStrommix {
+	display: flex;
+}
+
+.strommixColor {
+	width: 60%;
+	padding: 30px;
+	background-color: #282533;
+	border-radius: 10px;
+	margin: auto;
+}
+
+.chartBoxStrommix {
+	position: relative;
+	height: 50vh;
+	/* width: 30vw; */
+	/* width: 60%; */
+	/* background-color: #282533; */
+	/* border-radius: 10px; */
+	padding: 20px;
+	/* margin-left: 80px; */
+	/* background-color: white;
+	border-radius: 10px;
+	padding: 20px 0; */
+}
+
+.linkMix {
+	display: inline-block;
+	font-size: 20px;
+	padding-top: 15px;
+	color: #948d99;
+}
+.linkMix > a {
+	display: inline-block;
+	font-size: 20px;
+	padding-top: 15px;
+	color: #948d99;
+}
+
+@media only screen and (min-width: 2000px) {
+	.linkMix {
+		font-size: 40px;
+	}
+	.linkMix > a {
+		font-size: 40px;
+	}
+}
+
+.btn_strommix {
+	/* width: 460px; */
+	width: 25%;
+	/* height: 50vh; */
+	text-align: center;
+	margin: auto;
+	background-color: #282533;
+	padding: 20px 0;
+	border-radius: 10px;
+}
+
+.btn_strommix button {
+	border: none;
+	background: none;
+	padding: 20px 10px;
+	cursor: pointer;
+	width: 45%;
+	font-size: 30px;
+}
+
+@media only screen and (min-width: 2000px) {
+	.btn_strommix button {
+		font-size: 70px;
+	}
+	#titleStrommix {
+		font-size: 60px;
+	}
+}
+
+#Wasser_btn {
+	color: #4285F4;
+}
+
+#Wind_btn {
+	color: #34A853;
+}
+#Solar_btn {
+	color: #FBBC05;
+}
+
+#Kohle_btn {
+	color: #4D4D4D;
+}
+
+#Nuklear_btn {
+	color: #999999;
+}
+
+#Gas_btn {
+	color: #B2B2B2;
+}
+
+#Andere_btn {
+	color: #CBCBCB;
+}
+
+
+.goals_title {
+	background-image: url(images/background_right.jpg);
+	background-position: center;
+	background-size: cover;
+	position: relative;
+	height: 180px;
+	text-align: center;
+	padding-top: 130px;
+	color: #F84F39;
+}
+
+.goals_title h2 {
+	font-size: 35px;
+}
+#goalsSub {
+	color: black;
+	margin-top: 10px;
+}
+
+
+@media only screen and (min-width: 900px) {
+	.goals_title {
+		background-image: none;
+		background-color: #201E29;
+	}
+
+	.goals_title h2 {
+		font-size: 43px;
+	}
+	#goalsSub {
+		color: #ffc857;
+		margin-top: 10px;
+		padding-left: 400px;
+		padding-top: 15px;
+	}
+}
+
+@media only screen and (min-width: 1200px) {
+	.goals_title {
+		height: 300px;
+		padding-top: 150px;
+	}
+	.goals_title h2 {
+		font-size: 55px;
+	}
+	#goalsSub {
+		padding-left: 400px;
+		padding-top: 15px;
+	}
+}
+
+@media only screen and (min-width: 2000px) {
+	.goals_title h2 {
+		font-size: 80px;
+	}
+}
+
+.overviewGoals {
+	background-image: url(images/background_right.jpg);
+	background-position: center;
+	background-size: cover;
+	position: relative;
+}
+
+.containerGoals {
+	display: none;
+}
+
+#Goals_mobile {
+	width: 92vw;
+	display: block;
+	margin: auto;
+	border-radius: 10px;
+}
+
+#Goals_intro_mobile {
+	font-size: 18px;
+	width: 92vw;
+	margin: auto;
+	padding-top: 20px;
+}
+
+.linkToGoals {
+	color: #3083DC
+}
+
+@media only screen and (min-height: 950px) {
+	.containerGoals_mobile {
+		display: none;
+	}
+	.containerGoals {
+		display: flex;
+	}
+	#Goals_overview {
+		width: 60vw;
+		object-fit: cover;
+    	object-position: center;
+		margin-right: 40px;
+		border-radius: 10px;
+	} 
+	#Goals_intro {
+		width: 30vw;
+		margin: auto;
+		font-size: 20px;
+	}
+}
+
+@media only screen and (min-width: 900px) {
+	.overviewGoals {
+		background-image: none;
+		background-color: #201E29;
+	}
+	.containerGoals_mobile {
+		display: none;
+	}
+	.containerGoals {
+		display: flex;
+	}
+	#Goals_overview {
+		width: 50%;
+		/* height: 60vh; */
+		object-fit: cover;
+    	object-position: center;
+		margin-right: 50px;
+		border-radius: 10px;
+	}
+	#Goals_intro {
+		width: 30vw;
+		margin: auto;
+		color: #E7ECEF;
+		font-size: 30px;
+		background-color: #282533;
+		padding: 10px;
+		border-radius: 10px;
+		align-self: flex-start;
+	}
+}
+
+@media only screen and (min-width: 2000px) {
+	#Goals_intro {
+		font-size: 50px;
+		border-radius: 30px;
+		padding: 30px;
+	}
+	#Goals_overview {
+		margin-right: 200px;
+		border-radius: 30px;
+	}
+}
+
+
+
+
+
+
+
+
+
+
+.hide {
+	display: none;
+}
+
+.unhide {
+	display: block;
+}
+
+#linkProduktionDesktop {
+	/* display: none; */
+	font-size: 20px;
+	padding-top: 15px;
+	color: #948d99;
+}
+
+@media only screen and (min-width: 2000px) {
+	#linkProduktionDesktop {
+		font-size: 40px;
+	}
+	#linkProduktionDesktop > a {
+		font-size: 40px;
+	}
+}
+
+.buttons {
+	text-align: center;
+}
+
+.buttons button {
+	border: none;
+	background: none;
+	font-size: 20px;
+	padding: 0 15px;
+	cursor: pointer;
+}
+
+#btnToVerbrauch {
+	color: #5FC471;
+}
+
+#btnToProduktion {
+	color: #948d99;
+	text-decoration: line-through;
+}
+
+@media only screen and (min-width: 2000px) {
+	.buttons button {
+		font-size: 50px;
+	}
+}
+
+
+.projects_title {
+	background-image: url(images/background_left.jpg);
+	background-position: center;
+	background-size: cover;
+	position: relative;
+	height: 180px;
+	text-align: center;
+	padding-top: 130px;
+	color: #F84F39;
+}
+
+.projects_title h2 {
+	font-size: 35px;
+}
+#projectsSub {
+	color: black;
+	margin-top: 10px;
+}
+
+
+@media only screen and (min-width: 900px) {
+	.projects_title {
+		background-image: none;
+		background-color: #201E29;
+	}
+
+	.projects_title h2 {
+		font-size: 43px;
+	}
+	#projectsSub {
+		color: #ffc857;
+		margin-top: 10px;
+		padding-left: 400px;
+		padding-top: 15px;
+	}
+}
+
+@media only screen and (min-width: 1200px) {
+	.projects_title {
+		height: 300px;
+		padding-top: 150px;
+	}
+	.projects_title h2 {
+		font-size: 55px;
+	}
+	#projectsSub {
+		padding-left: 400px;
+		padding-top: 15px;
+	}
+}
+
+@media only screen and (min-width: 2000px) {
+	.projects_title h2 {
+		font-size: 80px;
+	}
+}
+
+.overviewProjects {
+	background-image: url(images/background_left.jpg);
+	background-position: center;
+	background-size: cover;
+	position: relative;
+}
+
+.containerTGD {
+	display: none;
+}
+
+#TGD_mobile {
+	width: 92vw;
+	display: block;
+	margin: auto;
+	border-radius: 10px;
+}
+
+#TGD_intro_mobile {
+	font-size: 18px;
+	width: 92vw;
+	margin: auto;
+	padding-top: 20px;
+}
+
+.linkToTGD {
+	color: #3083DC
+}
+
+@media only screen and (min-height: 950px) {
+	.containerTGD_mobile {
+		display: none;
+	}
+	.containerTGD {
+		display: flex;
+	}
+	#TGD_overview {
+		width: 60vw;
+		margin-left: 40px;
+		border-radius: 10px;
+	}
+	#TGD_intro {
+		width: 30vw;
+		margin: auto;
+		font-size: 20px;
+	}
+}
+
+@media only screen and (min-width: 900px) {
+	.overviewProjects {
+		background-image: none;
+		background-color: #201E29;
+	}
+	.containerTGD_mobile {
+		display: none;
+	}
+	.containerTGD {
+		display: flex;
+	}
+	#TGD_overview {
+		width: 50%;
+		margin-left: 50px;
+		border-radius: 10px;
+	}
+	#TGD_intro {
+		width: 30vw;
+		margin: auto;
+		color: #E7ECEF;
+		font-size: 30px;
+		background-color: #282533;
+		padding: 10px;
+		border-radius: 10px;
+		align-self: flex-start;
+	}
+}
+
+@media only screen and (min-width: 2000px) {
+	#TGD_intro {
+		font-size: 50px;
+		border-radius: 30px;
+		padding: 30px;
+	}
+	#TGD_overview {
+		margin-left: 200px;
+		border-radius: 30px;
+	}
+}
+
+
+#Wasser_btn.cross {
+	text-decoration: line-through;
+	color: #948d99;
+}
+#Wind_btn.cross {
+	text-decoration: line-through;
+	color: #948d99;
+}
+#Solar_btn.cross {
+	text-decoration: line-through;
+	color: #948d99;
+}
+#Kohle_btn.cross {
+	text-decoration: line-through;
+	color: #948d99;
+}
+#Nuklear_btn.cross {
+	text-decoration: line-through;
+	color: #948d99;
+}
+#Gas_btn.cross {
+	text-decoration: line-through;
+	color: #948d99;
+}
+#Andere_btn.cross {
+	text-decoration: line-through;
+	color: #948d99;
+}
+
+
+.FE_title {
+	background-image: url(images/background_left.jpg);
+	background-position: center;
+	background-size: cover;
+	position: relative;
+	height: 180px;
+	text-align: center;
+	padding-top: 70px;
+	color: #F84F39;
+}
+
+.FE_title h2 {
+	font-size: 35px;
+}
+#FESub {
+	color: black;
+	margin-top: 10px;
+}
+
+
+@media only screen and (min-width: 900px) {
+	.FE_title {
+		background-image: none;
+		background-color: #201E29;
+	}
+
+	.FE_title h2 {
+		font-size: 43px;
+	}
+	#FESub {
+		color: #ffc857;
+		margin-top: 10px;
+		padding-left: 400px;
+		padding-top: 15px;
+	}
+}
+
+@media only screen and (min-width: 1200px) {
+	.FE_title {
+		height: 300px;
+		padding-top: 150px;
+	}
+	.FE_title h2 {
+		font-size: 55px;
+	}
+	#FESub {
+		padding-left: 400px;
+		padding-top: 15px;
+	}
+}
+
+@media only screen and (min-width: 2000px) {
+	.FE_title h2 {
+		font-size: 80px;
+	}
+}
+
+.containerFE {
+	display: none;
+}
+
+#FE_mobile {
+	width: 92vw;
+	display: block;
+	margin: auto;
+	border-radius: 10px;
+}
+
+#FE_intro_mobile {
+	font-size: 18px;
+	width: 92vw;
+	margin: auto;
+	padding-top: 20px;
+}
+
+#FE_exTitle {
+	width: 92vw;
+	margin: auto;
+	padding-top: 15px;
+	font-size: 18px;
+	word-wrap: break-word;
+}
+
+#FE_ex {
+	width: 85vw;
+	margin: auto;
+	padding-top: 7px;
+	font-size: 18px;
+}
+.linkToHydro {
+	color: #3083DC;
+	/* width: 92vw; */
+	margin: auto;
+	display: block;
+	padding-top: 10px;
+	padding-left: 20px;
+}
+
+@media only screen and (min-width: 900px) {
+	.overviewFE {
+		background-image: none;
+		background-color: #201E29;
+	}
+	.containerFE_mobile {
+		display: none;
+	}
+	.containerFE {
+		display: flex;
+	}
+	#FE_overview {
+		width: 50%;
+		margin-right: 50px;
+		border-radius: 10px;
+		object-fit: cover;
+    	object-position: right
+	}
+	.innerContainer {
+		background-color: #282533;
+		padding: 10px;
+		border-radius: 10px;
+		margin: auto;
+	}
+	#FE_intro {
+		width: 30vw;
+		margin: auto;
+		color: #E7ECEF;
+		font-size: 30px;
+		/* background-color: #282533; */
+		padding: 10px;
+		border-radius: 10px;
+		align-self: flex-start;
+	}
+	#FE_exTitle {
+		color: #E7ECEF;
+		font-size: 30px;
+		width: 30vw;
+	}
+	#FE_ex {
+		color: #E7ECEF;
+		font-size: 30px;
+		width: 30vw;
+		margin-left: 30px;
+	}
+	.linkToHydro {
+		font-size: 30px;
+	}
+}
+
+@media only screen and (min-width: 2000px) {
+	.innerContainer {
+		border-radius: 30px;
+		padding: 30px;
+	}
+	#FE_intro {
+		font-size: 50px;
+	}
+	#FE_exTitle {
+		font-size: 50px;
+	}
+	#FE_ex {
+		font-size: 50px;
+	}
+	#FE_overview {
+		margin-right: 200px;
+		border-radius: 30px;
+	}
+	.linkToHydro {
+		font-size: 50px;
+		display: block;
+		padding-top: 30px;
+	}
+}
+
+.footer {
+	padding: 40px 0;
+}
+
+.footer ul {
+	margin-top: 0;
+	padding: 0;
+	list-style: none;
+	font-size: 25px;
+	line-height: 1.6;
+	margin-bottom: 0;
+	text-align: center;
+}
+
+.footer ul li a {
+	color: inherit;
+	text-decoration: none;
+	opacity: 0.8;
+}
+
+.footer ul li {
+	display: inline-block;
+	padding: 0 15px;
+}
+
+.footer ul li a:hover {
+	opacity: 1;
+}
+
+.footer .copyright {
+	margin-top: 15px;
+	text-align: center;
+	font-size: 13px;
+}
+
+@media only screen and (min-width: 2000px) {
+	.footer ul {
+		font-size: 34px;
+	}
+	.footer .copyright {
+		font-size: 24px;
+	}
+}
+
+@media only screen and (min-width: 3000px) {
+	.footer ul {
+		font-size: 44px;
+	}
+	.footer .copyright {
+		font-size: 34px;
+	}
+}
+
+@media only screen and (max-width: 500px) {
+	.footer ul {
+		font-size: 18px;
+	}
+	.footer .copyright {
+		font-size: 13px;
+	}
+}

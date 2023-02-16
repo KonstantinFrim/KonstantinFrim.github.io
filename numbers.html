@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="de">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Energiewende China - Zahlen und Fakten</title>
+		<link rel="stylesheet" href="stylesNumbers.css">
+		<link rel="preconnect" href="https://fonts.googleapis.com"> 
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
+		<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,300;0,400;0,600;0,800;1,100;1,300;1,400;1,600;1,800&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100;0,300;0,400;0,600;0,800;1,100;1,300;1,400;1,600;1,800&display=swap" rel="stylesheet"> 
+        <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+		<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+	</head>
+
+    <body>
+        <!-- <div class="head">
+            <img id="logo" src="images/Logo.png">
+            <h3>Energiewende in<br> China</h3>
+        </div> -->
+        
+        <header>
+            <div class="logo">Energiewende in China</div>
+            <div class="hamburger">
+                <div class="line"></div>
+                <div class="line"></div>
+                <div class="line"></div>
+            </div>
+            <nav class="nav-bar">
+                <ul>
+                    <li>
+                        <a href="index.html#home">Home</a>
+                    </li>
+                    <li>
+                        <a href="index.html#numbersTitle" class="active">Zahlen</a>
+                    </li>
+                    <li>
+                        <a href="index.html#goalsTitle">Ziele</a>
+                    </li>
+                    <li>
+                        <a href="index.html#projectsTitle">Projekte</a>
+                    </li>
+                    <li>
+                        <a href="index.html#FETitle">Forschung</a>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+
+        <div class="chartBackground">
+            <div class="chartContainer">
+                <div class="buttons">
+                    <button onclick="switchToVerbrauch()" id="btnToVerbrauch">Stromverbrauch</button>
+                    <button onclick="switchToProduktion()" id="btnToProduktion">Stromproduktion</button>
+                </div>
+                <div class="chartBox">
+                    <p class="linkVerbrauch" id="linkVerbrauchDesktop">Quelle: Enerdata<sup><a href="https://energiestatistik.enerdata.net/strom/strom-heimisches-verbrauch-data.html" target="_blank" style="color: #948d99">1</a></sup></p>
+					<p class="hide" id="linkProduktionDesktop">Quelle: Enerdata<sup><a href="https://energiestatistik.enerdata.net/strom/welt-elektrizitaet-produktion-statistik.html" target="_blank" style="color: #948d99">2</a></sup></p>
+                    <canvas id="chart_verbrauch"></canvas>
+                </div>
+                <div class="btn_verbrauch" id="btnTest1">
+                    <button onclick="toggleDataV(0)" id="China_btnV">China</button>
+                    <button onclick="toggleDataV(1)" id="USA_btnV">USA</button>
+                    <button onclick="toggleDataV(2)" id="DE_btnV">Deutschland</button>
+                </div>
+                
+                <div class="btn_produktion" id="btnTest2">
+                    <button onclick="toggleDataV(3)" id="China_btnP">China</button>
+                    <button onclick="toggleDataV(4)" id="USA_btnP">USA</button>
+                    <button onclick="toggleDataV(5)" id="DE_btnP">Deutschland</button>
+                </div>
+            </div>
+        </div>
+
+        <p class="textBox">
+            China ist in vielerlei Hinsicht ein Land der Extreme. Es hat die meisten Einwohner der Welt<sup><a href="https://de.statista.com/statistik/daten/studie/1722/umfrage/bevoelkerungsreichste-laender-der-welt/" target="_blank" style="color: black">8</a></sup>, es ist die zweitgrößte Volkswirtschaft der Welt<sup><a href="https://de.statista.com/statistik/daten/studie/157841/umfrage/ranking-der-20-laender-mit-dem-groessten-bruttoinlandsprodukt/" target="_blank" style="color: black">9</a></sup>, es betreibt das längste Schienennetz für Hochgeschwindigkeitszüge der Welt<sup><a href="https://de.statista.com/infografik/22108/laenge-genutzter-hochgeschwindigkeits-zugstrecken/" target="_blank" style="color: black">10</a></sup> und: China ist der weltweit größte Stromverbraucher und -produzent.<sup><a href="https://energiestatistik.enerdata.net/strom/strom-heimisches-verbrauch-data.html" target="_blank" style="color: black">1</a></sup> <sup><a href="https://energiestatistik.enerdata.net/strom/welt-elektrizitaet-produktion-statistik.html" target="_blank" style="color: black">2</a></sup><br>Im Jahr 2021 verbrauchte China 7714 TWh Strom und produzierte 8537 TWh. Für Deutschland betragen diese Zahlen 503 TWh bzw. 584 TWh. Selbst die USA kommen mit einem Verbrauch von 3869 TWh und einer Produktion von 4381 TWh nicht in die Nähe von Chinas Größenordnung. Für die nächsten Jahre wird weiterhein eine Steigerung im einstelligen Prozentbereich erwartet (Interview).<br>Blick man etwas weiter in die Vergangenheit, tut sich allerdings ein etwas anderes Bild auf: Im Jahr 1990 waren China und Deutschland mit Verbrauch und Produktion um 500 TWh ungefähr gleichauf, während die USA bei jeweils ungefähr 3000 TWh lagen. Während in China seitdem ein konstant hohes Wachstum zu beobachten ist, verharrt Deutschland auf einem mehr oder weniger gleichen Niveau und auch in den USA steigen beide Werte eher langsam an, sodass China die USA im Jahr 2011 in beiden Bereichen überholte.<sup><a href="https://energiestatistik.enerdata.net/strom/strom-heimisches-verbrauch-data.html" target="_blank" style="color: black">1</a></sup> <sup><a href="https://energiestatistik.enerdata.net/strom/welt-elektrizitaet-produktion-statistik.html" target="_blank" style="color: black">2</a></sup>
+        </p>
+
+        <h3 id="mixTitle">Strommix in China in %<sup><a href="https://chinaenergyportal.org/2019-detailed-electricity-statistics-update-of-jan-2021/" target="_blank" style="color: black; font-weight: normal;">3</a></sup></h3>
+        <div class="strommixBackground">
+            <div class="containerMix">
+                <div class="chartBoxMix">
+                    <canvas id="chart_strommix"></canvas>
+                </div>
+                <div class="btn_strommix">
+                    <!-- <h3 id="titleStrommix">Strommix in China in %</h3> -->
+                    <button onclick="toggleDataM(0)" id="Wasser_btn">Wasser</button>
+                    <button onclick="toggleDataM(1)" id="Wind_btn">Wind</button>
+                    <button onclick="toggleDataM(2)" id="Solar_btn">Solar</button>
+                    <button onclick="toggleDataM(3)" id="Kohle_btn">Kohle</button>
+                    <button onclick="toggleDataM(4)" id="Nuklear_btn">Nuklear</button>
+                    <button onclick="toggleDataM(5)" id="Gas_btn">Gas</button>
+                    <button onclick="toggleDataM(6)" id="Andere_btn">Andere</button>
+                </div>
+            </div>
+        </div>
+        <p class="textBox">
+            Mit über 62% stammt der Großteil des chinesischen Stroms aus fossilen Brennstoffen. China betreibt über 1000 Kohlekraftwerke<sup><a href="https://de.statista.com/infografik/22439/anzahl-der-aktiven-kohlekraftwerke-weltweit/" target="_blank" style="color: black">11</a></sup> - mit großem Abstand die meisten der Welt - und trägt damit einen erheblichen Anteil am globalen CO2-Ausstoß. Allerdings gewinnt Strom aus erneuerbaren Energien immer mehr Bedeutung. Über 17% des produzierten Stroms stammt schon jetzt aus Wasserkraft und weitere 8% aus Wind- und Solarenergie. Das Ziel, dass erneuerbare Energien bis 2025 einen Anteil von 20% erreichen (Interview) wäre damit bereits erreicht. Inwiefern diese Zahlen tatsächlich glaubwürdig sind lässt sich nur schwer sagen, allerdings werden sie auch von Experten wie Frank Haugwitz verwendet - zudem müsse zunächst das Gegenteil bewiesen werden (Interview). 2020 wurden in China neue Solaranlagen mit einer Leistung von 50 GW und Windkraftanlagen mit einer Kapazität von 72 GW errichtet. Zum Vergleich: Die gesamte in Deutschland installierte Leistung aus Photovoltaikanlagen lag im gleichen Jahr bei 54 GW und die aus Windkraft bei 63 GW.<sup><a href="https://blog.energybrainpool.com/chinas-energiesystem-in-2020-rekordzubau-von-erneuerbaren-trotz-corona/" target="_blank" style="color: black">12</a></sup>
+        </p>
+
+        <section class="footer">
+			<ul class="list">
+				<li>
+					<a href="index.html#home">Home</a>
+				</li>
+				<li>
+					<a href="index.html#numbersTitle">Zahlen</a>
+				</li>
+				<li>
+					<a href="index.html#goalsTitle">Ziele</a>
+				</li>
+				<li>
+					<a href="index.html#projectsTitle">Projekte</a>
+				</li>
+				<li>
+					<a href="index.html#FETitle">Forschung</a>
+				</li>
+				<!-- <li>
+					<a href="impressum.html">Impressum</a>
+				</li> -->
+			</ul>
+			<!-- <p class="copyright">
+				Konstantin Frim 2022
+			</p> -->
+		</section>
+
+        <div style="height: 30px;"></div>
+
+        <script src="scripts.js"></script>
+    </body>
+
+</html>

@@ -1,0 +1,164 @@
+* {
+	padding: 0;
+	margin: 0;
+	font-family: 'Montserrat', sans-serif;
+	scroll-behavior: smooth;
+}
+
+header {
+	width: auto;
+	height: 80px;
+	background: #201E29;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding: 0 100px;
+}
+
+.logo {
+	font-size: 28px;
+	font-weight: bold;
+	color: #fefefe;
+}
+
+.hamburger {
+	display: none;
+}
+
+.nav-bar ul {
+	display: flex;
+	list-style: none;
+}
+
+.nav-bar ul li a {
+	display: block;
+	color: #fefefe;
+	font-size: 20px;
+	padding: 10px 25px;
+	border-radius: 50px;
+	transition: 0.2s;
+	margin: 0 5px;
+	text-decoration: none;
+}
+
+.nav-bar ul li a:hover {
+	color: #11101b;
+	background: #fefefe;
+}
+
+.nav-bar ul li a.active {
+	color: #11101b;
+	background: #fefefe;
+}
+
+@media only screen and (max-width: 1320px) {
+	header {
+		padding: 0 50px;
+	}
+}
+
+@media only screen and (max-width: 1100px) {
+	header {
+		padding: 0 30px;
+	}
+}
+
+@media only screen and (max-width: 900px) {
+	.hamburger {
+		display: block;
+		cursor: pointer;
+	}
+	.hamburger .line {
+		width: 30px;
+		height: 3px;
+		background: #fefefe;
+		margin: 6px 0;
+	}
+	.nav-bar {
+		height: 0px;
+		position: absolute;
+		top: 80px;
+		left: 0;
+		right: 0;
+		width: 100vw;
+		background: #11101b;
+		transition: 0.5s;
+		overflow: hidden;
+        z-index: 1;
+        border-bottom-left-radius: 10px;
+        border-bottom-right-radius: 10px;
+	}
+	.nav-bar.active {
+		height: 450px;
+        width: auto;
+        z-index: 1;
+	}
+	.nav-bar ul {
+		display: block;
+		width: fit-content;
+		margin: 80px auto 0 auto;
+		text-align: center;
+		transition: 0.5s;
+		opacity: 0;
+	}
+	.nav-bar.active ul {
+		opacity: 1;
+	}
+	.nav-bar ul li a {
+		margin-bottom: 12px;
+	}
+}
+
+@media only screen and (min-width: 2000px) {
+	header {
+		padding-top: 30px;
+	}
+	.logo {
+		font-size: 34px;
+	}
+	.nav-bar ul li a {
+		font-size: 26px;
+	}
+}
+
+@media only screen and (min-width: 3000px) {
+	header {
+		padding-top: 60px;
+	}
+	.logo {
+		font-size: 60px;
+	}
+	.nav-bar ul li a {
+		font-size: 40px;
+	}
+}
+
+.textBox {
+    margin-left: 30px;
+    margin-top: 30px;
+}
+
+.textBox h1 {
+    font-size: 20px;
+}
+.textBox h2 {
+    font-size: 20px;
+    padding-top: 15px;
+}
+.textBox p {
+    padding-top: 10px;
+}
+
+@media only screen and (min-width: 2000px) {
+    .textBox h1 {
+        font-size: 50px;
+    }
+    .textBox h2 {
+        font-size: 40px;
+        padding-top: 15px;
+    }
+    .textBox p {
+        padding-top: 10px;
+        font-size: 30px;
+    }
+}
